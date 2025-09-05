@@ -26,4 +26,4 @@ Here’s what’s inside this repository:
 ## 🚀 HOW TO VIEW
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/vision-BA/MY-PORTIFOLIO.git
