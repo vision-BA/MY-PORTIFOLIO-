@@ -15,11 +15,6 @@
     --card: #ffffff;
     --muted: #1e3c54;
 }
-[data-theme="dark"]{
-    --bg: #0f2430;
-    --text: #e6f0f6;
-    --card: #152b3a;
-}
 body{
     color: var(--text);
     background-color: var(--bg);
@@ -53,16 +48,6 @@ nav{
     height: 2px;
     margin: 5px 0;
     background-color: #ffffff;
-}
-/* Dark mode toggle button */
-.theme-toggle{
-    display: none;
-    background: transparent;
-    border: none;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 8px;
-    cursor: pointer;
 }
 /* Mobile brand hidden by default (desktop) */
 .brand-mobile{
@@ -158,6 +143,7 @@ nav li:first-child{
     background-color:var(--brand-2);
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(64,127,175,0.10);
+    min-height: 400px; /* original height preserved, adjust as needed */
 }
 .heroLeft {
     margin-left: 0;
@@ -507,7 +493,6 @@ footer h4{
         justify-self: center;
         white-space: nowrap;
     }
-    .theme-toggle{ justify-self: end; }
     /* Collapse menu by default */
     nav ul{
         display: none;
@@ -630,4 +615,64 @@ footer h4{
     max-width: 100%;
     padding: 0 4px;
   }
+}
+/* Social iframe icon styling */
+.heroLeft iframe {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(64,127,175,0.15);
+  border: none;
+  vertical-align: middle;
+}
+.heroLeft iframe i {
+  font-size: 2rem;
+  color: #407faf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 18px;
+}
+.icon-circle {
+  background: #fff;
+  color: #407faf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(64,127,175,0.15);
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.icon-circle i {
+  color: #407faf;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+.icon-circle:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(37,159,37,0.18);
+  background: #259f25;
+}
+.icon-circle:hover i {
+  color: #fff;
 }
